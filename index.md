@@ -1,3 +1,0 @@
-# Finanzanalyse
-
-und Test verschiedener ...
