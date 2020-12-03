@@ -1,0 +1,9 @@
+navbar:
+  title: "Finanzanalyse"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Function Reference"
+      href: reference/index.html
+    - text: "Tutorials"
+      href: articles/index.html

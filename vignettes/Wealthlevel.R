@@ -1,0 +1,32 @@
+rm(list = ls())
+
+###########################################
+
+w_levels <- c(10^4, 10^5, 10^6, 10^7, 10^8)
+df <- data.frame(wealth = c(0, w_levels),
+                 level = seq(1, length(w_levels) + 1))
+
+to_plot <- df
+
+text_labels <- data.frame(wealth = w_levels,
+                          level = seq(2, length(w_levels) + 1),
+                          text = c("Grocery prices\nmatter less",
+                                   "Restaurant prices\nmatter less",
+                                   "Vacation prices\n  matter less",
+                                   "Home prices\nmatter less",
+                                   "What are prices?"))
+
+source_string <- str_wrap(paste0("Source: Simulated data (OfDollarsAndData.com)"),
+                          width = 85)
+
+ggplot(data = to_plot, aes(x=wealth, y = level)) +
+  geom_step() +
+  geom_point(data=text_labels, aes(x=wealth, y = level), col = "red") +
+  geom_text_repel(data=text_labels, aes(x=wealth, y = level, label = text), col = "red", size = 3, max.iter = 3000) +
+  scale_y_continuous( breaks = seq(1, length(w_levels) +1)) +
+  scale_x_continuous( limits= c(NA, 10^8 *1.1), breaks = c(0, w_levels), trans = "log10") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
+  ggtitle(paste0("Wealth Level Based on Net Worth")) +
+  labs(x = paste0("Liquid Net Worth"), y = paste0("Wealth Level"),
+       caption = paste0(source_string))
