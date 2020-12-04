@@ -1,6 +1,5 @@
 ---
 title: "Return über 30, 180 u 365 Tage"
-author: "Jan Taubitz"
 date: "`r Sys.Date()`"
 ---
 

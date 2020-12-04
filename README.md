@@ -1,8 +1,13 @@
-# geldundgeschichte
-## Finanzanalyse
+# Finanzanalyse
 
 und Test verschiedener ...
 
-This is a line from RStudio
-test
-test
+Test der webpage
+
+Was aktualisiert die Website?
+usethis::use_github_action("pkgdown")
+oder
+pkgdown::build_site()
+oder
+commit?
+oder oder

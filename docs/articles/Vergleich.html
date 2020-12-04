@@ -64,7 +64,7 @@
       <h1 data-toc-skip>Return v Volatilität</h1>
                         <h4 class="author">Jan Taubitz</h4>
             
-            <h4 class="date">2020-12-02</h4>
+            <h4 class="date">2020-12-04</h4>
       
       
       <div class="hidden name"><code>Vergleich.Rmd</code></div>
@@ -167,12 +167,12 @@
 ##   symbol avg_return Volatility Indicator   
 ##   &lt;chr&gt;       &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;       
 ## 1 TSLA       0.0039     0.0431 Watchlist   
-## 2 SQ         0.0031     0.0374 Einzelaktien
+## 2 SQ         0.0031     0.0373 Einzelaktien
 ## 3 NVDA       0.0019     0.0317 Watchlist   
 ## 4 PYPL       0.0018     0.0247 Watchlist   
 ## 5 AAPL       0.0017     0.0222 Einzelaktien
-## 6 NFLX       0.0016     0.0271 Watchlist</code></pre>
-<p>Der Plot zeigt den durchschnittlichen täglichen Return im Verhältnis zur Volatilität der Werte für den Zeitraum 2017-12-31 bis 2020-12-02.</p>
+## 6 NFLX       0.0016     0.0270 Watchlist</code></pre>
+<p>Der Plot zeigt den durchschnittlichen täglichen Return im Verhältnis zur Volatilität der Werte für den Zeitraum 2017-12-31 bis 2020-12-04.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">plot</span> <span class="op">=</span> <span class="va">avg_return</span> <span class="op">%&gt;%</span> <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span><span class="va">avg_return</span>, <span class="va">Volatility</span>, color <span class="op">=</span> <span class="va">Indicator</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
   <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span><span class="op">+</span>
